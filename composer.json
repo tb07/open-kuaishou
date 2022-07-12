@@ -1,0 +1,39 @@
+{
+    "name": "tb07/open-kuaishou",
+    "description": "快手sdk",
+    "keywords": [
+        "快手"
+    ],
+    "authors": [
+        {
+            "name": "",
+            "email": ""
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "hanson/foundation-sdk": "^4.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "symfony/var-dumper": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tb07\\OpenKuaiShou\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenKuaiShou\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tb07\\OpenKuaiShou\\LaravelServiceProvider"
+            ]
+        }
+    }
+}
