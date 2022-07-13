@@ -6,8 +6,8 @@
     ],
     "authors": [
         {
-            "name": "",
-            "email": ""
+            "name": "tb07",
+            "email": "89tb07@gmail.com"
         }
     ],
     "require": {
@@ -34,6 +34,9 @@
             "providers": [
                 "Tb07\\OpenKuaiShou\\LaravelServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
         }
     }
 }
