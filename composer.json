@@ -2,7 +2,6 @@
     "name": "tb07/open-kuaishou",
     "description": "快手sdk",
     "type":"library",
-    "version":"10.04",
     "minimum-stability": "stable",
     "authors": [
         {
