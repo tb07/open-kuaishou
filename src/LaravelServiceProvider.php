@@ -20,14 +20,14 @@ class LaravelServiceProvider extends BaseServiceProvider
     {
         $source = dirname(__DIR__) . '/config/kuaishou.php';
         if ($this->app->runningInConsole()) {
-            $this->publishes([$source => base_path('config/kuaishou.php')], 'kuaiShou');
+            $this->publishes([$source => base_path('config/kuaishou.php')], 'kuaishou');
         }
 
         if ($this->app instanceof LumenApplication) {
-            $this->app->configure('kuaiShou');
+            $this->app->configure('kuaishou');
         }
 
-        $this->mergeConfigFrom($source, 'kuaiShou');
+        $this->mergeConfigFrom($source, 'kuaishou');
     }
 
     public function register()
@@ -35,9 +35,9 @@ class LaravelServiceProvider extends BaseServiceProvider
         $this->setupConfig();
 
         $this->app->singleton(OpenKuaiShou::class, function ($app) {
-            return new OpenKuaiShou(config('kuaiShou'));
+            return new OpenKuaiShou(config('kuaishou'));
         });
 
-        $this->app->alias(OpenKuaiShou::class, 'open.kuaiShou');
+        $this->app->alias(OpenKuaiShou::class, 'open.kuaishou');
     }
 }

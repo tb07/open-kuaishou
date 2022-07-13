@@ -12,21 +12,20 @@ class TestCase extends \PHPUnit\Framework\TestCase
     public function getApp()
     {
         return $this->app ?: $this->app = new OpenKuaiShou([
-            'debug' => true,
-            'appKey' => getenv('kuaiShou.appKey'),
-            'appSecret' => getenv('kuaiShou.appSecret'),
-            'signSecret' => getenv('kuaiShou.signSecret'),
+            'debug'            => true,
+            'appKey'           => getenv('kuaiShou.appKey'),
+            'appSecret'        => getenv('kuaiShou.appSecret'),
+            'signSecret'       => getenv('kuaiShou.signSecret'),
             'messageSecretKey' => getenv('kuaiShou.messageSecretKey'),
         ]);
     }
 
     public function assertOk(array $result)
     {
-        if (empty($result['error_response'])) {
+        if (!isset($result['error_msg']) || empty($result['error_msg'])) {
             $this->assertTrue(true);
         } else {
-            var_dump($result);
-            $this->assertTrue(false, $result['error_response']['sub_msg'] ?? $result['error_response']['msg']);
+            $this->assertTrue(false, $result['sub_msg'] ?? $result['error_msg'] ?? $result['error'] ?? '');
         }
 
     }

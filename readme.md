@@ -20,7 +20,7 @@ $app = new Tb07\OpenKuaiShou\OpenKuaiShou([
 ]);
 
 // 创建授权
-$app->kuaiShou->authTokenCreate();
+$app->ksAuthorization->createPcAuthUrl('https://www.test.com/authorization');
 
 // 部分API没有封装成具体方法，你也可以自行调用 request 方法
 $app->request('请求方式','方法', ['参数'=> '值'],'授权凭证');

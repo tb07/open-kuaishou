@@ -1,7 +1,8 @@
 <?php
 
-namespace Tb07\OpenKuaiShou;
+namespace Tb07\OpenKuaiShou\Model;
 
+use Tb07\OpenKuaiShou\OpenKuaiShou;
 
 abstract class Module
 {
