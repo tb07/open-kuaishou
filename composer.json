@@ -3,6 +3,7 @@
     "description": "快手sdk",
     "type":"library",
     "minimum-stability": "stable",
+    "homepage": "https://github.com/tb07/open-kuaishou",
     "authors": [
         {
             "name": "tb07",
